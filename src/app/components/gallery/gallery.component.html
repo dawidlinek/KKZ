@@ -1,0 +1,8 @@
+<div [ngStyle]='bgStyle' class='main'>
+    <div class='center'>
+            <h1>Galeria</h1>
+            <img [src]='path'>
+            <div class='buttons'><button (click)='change(-1)'>Previous</button><button (click)='change(1)'>Next</button></div>
+            <input type="checkbox" (change)='checkbox_event()'>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.buttons button:nth-child(2){
+    float:right
+}
+::ng-deep :root{
+    --center-width:40rem;
+}
+img{
+width: var(--center-width);
+border-radius: 2%;
+}
+.main{
+    height: 100vh;
+}
+button{
+    width: 50%;
+}
+.center{
+    width: var(--center-width);
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+h1{
+    text-align: center;
+}

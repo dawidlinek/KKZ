@@ -1,0 +1,24 @@
+<input /> <button (click)="AddNew()">Dodaj</button>
+<div class="kanban">
+    <div>
+        <h1>To do</h1>
+        <p *ngFor="let task of tasks.new;index as i">
+            {{task}}
+            <button (click)="move('new','in_progress',i)">-></button>
+        </p>
+    </div>
+    <div>
+        <h1>In progress</h1>
+        <p *ngFor="let task of tasks.in_progress;index as i">
+            {{task}}
+            <button (click)="move('in_progress','finished',i)">-></button>
+        </p>
+    </div>
+    <div>
+        <h1>Finished</h1>
+        <p *ngFor="let task of tasks.finished;index as i">
+            {{task}}
+            <button (click)="move('finished','deleted',i)">X</button>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<p>loops-ifs works!</p>
+<p *ngFor="let item of arr; index as i">
+
+    {{item}} - {{i}} <button (click)='remove(i)'>Usuń</button>
+</p>
+<p *ngIf='arr.length==0' [ngStyle]="customStyle">
+    Tablica jest pusta
+</p>
+<input>
+<button (click)="addNew()">Add</button>

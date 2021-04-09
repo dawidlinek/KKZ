@@ -1,0 +1,6 @@
+.kanban{
+    display: flex;
+}
+.kanban >div{
+    width: 30%;
+}

@@ -1,0 +1,8 @@
+<!-- <p>map-api works!</p> -->
+<input type='text'  [(ngModel)]="adress"/><!-- (input)="autocomplete()" -->
+
+<button (click)='autocomplete()'>Send</button>
+<ul id='ul' >
+    
+    <li *ngFor="let location of locations" > {{location.display_name}}</li>
+</ul>
