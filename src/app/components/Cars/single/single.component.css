@@ -1,0 +1,26 @@
+.box{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    /* background-color: #fff; */
+    padding: 10px;
+    margin: 10px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #e2e1e0;
+}
+.des{
+      
+      float: left;
+      /* margin-left:40%; */
+    }
+    .logo{
+      height: 100px;
+
+  }
+  .des2{
+      /* display: flex; */
+      margin: 0 auto;
+      /* width: 40%; */
+      /* text-align: center; */
+  }

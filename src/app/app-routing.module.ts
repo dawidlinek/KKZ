@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarComponent } from './components/Cars/car/car.component';
+import { IndexComponent } from './components/Cars/index/index.component';
+import { SingleComponent } from './components/Cars/single/single.component';
+import { MapApiComponent } from './components/map-api/map-api.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'cars',component:IndexComponent},
+  {path:'cars/:mark',component:SingleComponent},
+  {path:'cars/:mark/:model',component:CarComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

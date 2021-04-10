@@ -10,6 +10,9 @@ import { KanbanComponent } from './components/kanban/kanban.component';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { MapApiComponent } from './components/map-api/map-api.component';
+import { IndexComponent } from './components/Cars/index/index.component';
+import { SingleComponent } from './components/Cars/single/single.component';
+import { CarComponent } from './components/Cars/car/car.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { MapApiComponent } from './components/map-api/map-api.component';
     GalleryComponent,
     KanbanComponent,
     FormComponent,
-    MapApiComponent
+    MapApiComponent,
+    IndexComponent,
+    SingleComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,

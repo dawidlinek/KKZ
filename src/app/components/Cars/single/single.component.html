@@ -1,0 +1,17 @@
+<!-- <p>single works!</p> -->
+<div class='des2'>
+    <div>
+
+        <div class='des'>
+            
+            <h1>{{mark.name}}</h1>
+            <p>avg_horsepower {{mark.avg_horsepower}} </p>
+            <p>avg_price {{mark.avg_price}}</p>
+            <p>num_models {{mark.num_models}}</p>
+        </div>
+        <img class='logo' src="http://www.carlogos.org/car-logos/{{mark.name}}-logo.png" alt="">
+    </div>
+    </div>
+    <div class="container">
+    <div *ngFor="let car of cars" class='box'> <a [routerLink]="[car.id]"> <h3>{{car.make}} {{car.model}}</h3> <img src="{{car.img_url}}" alt=""> </a></div>
+</div>
