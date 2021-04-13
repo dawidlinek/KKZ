@@ -1,0 +1,11 @@
+<div>
+
+    <button (click)="startStoper()">Start</button>
+    <button (click)="stopStoper()">Stop</button>
+    <button (click)="clearStoper()">Reset</button>
+    <button (click)="addNow()">Dodaj </button>
+</div>
+<h2>{{diffDate.minutes}}:{{diffDate.seconds}} {{diffDate.miliseconds}}</h2>
+<div id='box'>
+    <h4 *ngFor='let i of times; let key = index'><span *ngIf='key<10'>{{i.minutes}}:{{i.seconds}} {{i.miliseconds}}</span></h4>
+</div>

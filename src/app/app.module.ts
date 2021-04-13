@@ -13,6 +13,7 @@ import { MapApiComponent } from './components/map-api/map-api.component';
 import { IndexComponent } from './components/Cars/index/index.component';
 import { SingleComponent } from './components/Cars/single/single.component';
 import { CarComponent } from './components/Cars/car/car.component';
+import { StoperComponent } from './components/stoper/stoper.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CarComponent } from './components/Cars/car/car.component';
     MapApiComponent,
     IndexComponent,
     SingleComponent,
-    CarComponent
+    CarComponent,
+    StoperComponent
   ],
   imports: [
     BrowserModule,
