@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Działania matematyczne</title>
+</head>
+<body>
+    <nav>
+       <div><img src="/assets/ee_09/logo.jpg" alt="matematyka"></div>
+       <div><h1>Pomocnik Matematyczny</h1></div>
+       <div><h4><a (click)="dzialania=true">Działania</a></h4></div>
+       <div><h4><a (click)="dzialania=false">Tabliczka mnożenia</a></h4></div>
+    </nav>
+    <main>
+<div *ngIf='dzialania'> 
+ <h3>Proste działania</h3>
+ <p>
+     <label for="a">liczba A:</label>
+     <input type="number" id='a' [(ngModel)]='a'>
+</p>
+<p>
+    <label for="B">liczba B:</label>
+    <input type="number" id='b' [(ngModel)]='b'>
+</p>
+
+ <button (click)='calculate(a+b)'>+</button>
+ <button (click)='calculate(a-b)'>-</button>
+ <button (click)='calculate(a*b)'>*</button>
+ <button (click)='calculate(a/b)'>/</button>
+ <button (click)='pow(a,b)'>A^B</button>
+
+ <p>Wynik to: {{wynik}}</p>
+</div>
+<div *ngIf='!dzialania'>
+    <img src="/assets/ee_09/obraz2.jpg" alt="">
+</div>
+<div>
+    <ul>
+        <li>dodawanie</li>
+        <li>odejmowanie</li>
+        <li>mnożenie</li>
+        <li>dzielenie</li>
+        <li>potęgowanie</li>
+    </ul>
+</div>
+    </main>
+    <footer>
+        Autor: PESEL
+    </footer>
+</body>
+</html>

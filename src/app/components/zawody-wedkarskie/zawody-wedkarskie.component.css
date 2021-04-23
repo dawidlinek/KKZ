@@ -1,0 +1,52 @@
+nav,main{
+  display: flex;
+  height: 200px;
+  background-color: rosybrown;
+  color: white;
+}
+body{
+  font-family:Tahoma;
+}
+nav div{
+  width: 50%;
+}
+main{
+  background-color: wheat;
+  padding: 50px;
+  color: black;
+  height: auto;
+}
+main div:first-child{
+  width: 40%;
+}
+main div:last-child{
+  width: 60%;
+}
+footer{
+  background-color: rosybrown;
+padding: 5px;
+text-align: center;
+}
+input{
+  display: block;
+}
+table{
+  width: 100%;
+  border: 3px dashed #515555;
+  text-align: center;
+  border-collapse: collapse;
+}
+td,th{
+  border: 3px dashed #515555;
+  text-align: center;
+  border-collapse: collapse;
+
+}
+main p{
+  display: flex;
+  margin-top: 10px;
+}
+.darkmode *{
+  background-color:#303631 !important;
+  color: #f5f5f5;
+}

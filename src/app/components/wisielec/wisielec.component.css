@@ -1,0 +1,12 @@
+#main{
+    display: grid;
+    place-items: center;
+    height: 80vh;
+}
+#nieprawidlowe{
+    margin-top: 20px;
+    max-width: 60%;
+}
+#nieprawidlowe span{
+    text-decoration: line-through;
+}

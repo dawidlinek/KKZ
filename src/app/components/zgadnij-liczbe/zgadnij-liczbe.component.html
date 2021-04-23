@@ -1,0 +1,11 @@
+<div id='main' [style.background]="a2==a1 && a1!=-1? 'green' :'white'">
+    <div>
+        <input type="number"  *ngIf='a2!=a1' [(ngModel)]='a2'/>
+        <input type="number" placeholder="Podaj min" *ngIf='a2==a1'  [(ngModel)]='min'/>
+        <input type="number"  placeholder="Podaj max" *ngIf='a2==a1' [(ngModel)]='max'/>
+        <p *ngIf='a2==a1 && a1!=-1'>Brawo wygrałeś</p>
+        <p *ngIf='a2 > a1'>Za dużo</p>
+        <p *ngIf='a2 < a1'>Za mało</p>
+        <button *ngIf='a2==a1' (click)='getRandomValue()'>Wylosuj nową wartość</button>
+    </div>
+</div>

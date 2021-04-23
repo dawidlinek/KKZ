@@ -1,0 +1,10 @@
+<div id='main' [style.background]="bgColor">
+<div id='content'>
+<p>{{proby}}</p>
+    <div> <span *ngFor='let znak of znaki'> {{znak.guessed?znak.org:'_'}} </span></div>
+    <input type="text" [(ngModel)]='wybrany'>
+    <button (click)='los()' *ngIf='win'> Wylosuj</button>
+    <button (click)='check()'*ngIf='!win'> Sprawdź</button>
+    <div id='nieprawidlowe'><span  *ngFor='let znak of wybrane'> {{znak}}</span></div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<title>Wędkowanie - moje hobby</title>
+<body [ngClass]="{'darkmode':darkmode}">
+  <nav>
+    <div><img src="/assets/ee_09/zawody.jpg" alt=""></div>
+    <div>
+      <h1>Zawody wędkarskie</h1></div>
+  </nav>
+  <main>
+    <div>
+      <h2>Dodaj nowe zawody wędkarskie</h2>
+     <label>Łowisko: </label> <input type="number" [(ngModel)]='lowisko'>
+     <label>Data (rrrr-mm-dd): </label> <input type="date" [(ngModel)]='data'>
+     <label>Sędzia: </label> <input type="text" [(ngModel)]='sedzia'>
+      <button (click)='wyczysc()'>Wyczyść</button> <button [disabled]='zawody.length>10' (click)='dodaj()'>Dodaj</button>
+      <p>
+
+        <input type="checkbox" [(ngModel)]='darkmode'><label>Dark Mode</label>
+      </p>
+      </div>
+    <div>
+      <p *ngIf='zawody.length==0'>Nie dodano żadnych zawodów</p>
+      <table *ngIf='zawody.length>0'>
+        <tr>
+          <th>Łowisko</th>
+          <th>Data</th>
+          <th>Sędzia</th>
+          <th>Akcje</th>
+        </tr>
+        <tr *ngFor='let tmp of zawody;let idx =index'>
+          <td>{{tmp.lowisko}}</td>
+          <td>{{tmp.data}}</td>
+          <td>{{tmp.sedzia}}</td>
+          <td><button (click)='usun(idx)'>Usuń</button></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <footer>
+    <p>Stronę przygotował: 00000000000000</p>
+  </footer>
+</body>

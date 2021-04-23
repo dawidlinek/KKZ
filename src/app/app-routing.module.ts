@@ -3,14 +3,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarComponent } from './components/Cars/car/car.component';
 import { IndexComponent } from './components/Cars/index/index.component';
 import { SingleComponent } from './components/Cars/single/single.component';
+import { PomocnikMatematycznyMainComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-main/pomocnik-matematyczny-main.component';
+import { HorneraComponent } from './components/hornera/hornera.component';
 import { MapApiComponent } from './components/map-api/map-api.component';
 import { StoperComponent } from './components/stoper/stoper.component';
+import { WisielecComponent } from './components/wisielec/wisielec.component';
+import { ZawodyWedkarskieComponent } from './components/zawody-wedkarskie/zawody-wedkarskie.component';
+import { ZgadnijLiczbeComponent } from './components/zgadnij-liczbe/zgadnij-liczbe.component';
 
 const routes: Routes = [
   {path:'cars',component:IndexComponent},
   {path:'cars/:mark',component:SingleComponent},
   {path:'cars/:mark/:model',component:CarComponent},
   {path:'stoper',component: StoperComponent},
+  {path:'ee_09_2019_06_04',component:PomocnikMatematycznyMainComponent},
+  {path:'zgadnij',component:ZgadnijLiczbeComponent},
+  {path:'horner',component:HorneraComponent},
+  {path:'wisielec',component:WisielecComponent},
+  {path:'wedkarz',component:ZawodyWedkarskieComponent},
 ];
 
 @NgModule({

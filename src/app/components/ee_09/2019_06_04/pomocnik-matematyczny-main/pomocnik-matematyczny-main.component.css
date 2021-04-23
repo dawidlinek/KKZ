@@ -1,0 +1,42 @@
+::ng-deep body{
+    font-family: Tahoma;
+    color:white;
+    
+}
+nav div{
+    background-color: #983713;
+    width: 17%;
+    height: 100px;
+}
+nav div:nth-child(2){
+   width:49%;
+   text-align: center;
+}
+main, nav{
+    display: flex;
+}
+main div{
+    background-color:#FF7F50;
+    height: 500px;
+}
+main div:first-child{
+width: 80%;
+}
+main div:last-child{
+    width: 20%;
+}
+footer{
+    background-color:  #983713;
+    text-align: right;
+}
+button{
+    background-color: #D3D3D3;
+    color:#2F2F2F;
+    border: 2px #2F2F2F solid;
+    margin:5px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+input{
+    color:orange;
+}

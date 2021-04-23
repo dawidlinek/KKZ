@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,12 +9,18 @@ import { LoopsIfsComponent } from './components/loops-ifs/loops-ifs.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { KanbanComponent } from './components/kanban/kanban.component';
 import { FormComponent } from './components/form/form.component';
-import { FormsModule } from '@angular/forms';
 import { MapApiComponent } from './components/map-api/map-api.component';
 import { IndexComponent } from './components/Cars/index/index.component';
 import { SingleComponent } from './components/Cars/single/single.component';
 import { CarComponent } from './components/Cars/car/car.component';
 import { StoperComponent } from './components/stoper/stoper.component';
+import { PomocnikMatematycznyMainComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-main/pomocnik-matematyczny-main.component';
+import { ZgadnijLiczbeComponent } from './components/zgadnij-liczbe/zgadnij-liczbe.component';
+import { HorneraComponent } from './components/hornera/hornera.component';
+import { WisielecComponent } from './components/wisielec/wisielec.component';
+import { ZawodyWedkarskieComponent } from './components/zawody-wedkarskie/zawody-wedkarskie.component';
+// import { PomocnikMatematycznyDzialaniaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-dzialania/pomocnik-matematyczny-dzialania.component';
+// import { PomocnikMatematycznyTabliczkaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-tabliczka/pomocnik-matematyczny-tabliczka.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,12 @@ import { StoperComponent } from './components/stoper/stoper.component';
     IndexComponent,
     SingleComponent,
     CarComponent,
-    StoperComponent
+    StoperComponent,
+    PomocnikMatematycznyMainComponent,
+    ZgadnijLiczbeComponent,
+    HorneraComponent,
+    WisielecComponent,
+    ZawodyWedkarskieComponent,
   ],
   imports: [
     BrowserModule,
