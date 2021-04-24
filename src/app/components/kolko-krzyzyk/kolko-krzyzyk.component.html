@@ -1,0 +1,11 @@
+<p *ngIf='runda==0'> {{text}} <button (click)='reset()'>Spróbuj ponownie</button> </p>
+<main>
+  <div *ngFor="let n of state;let i = index">
+    <button [ngClass]='{"btn-primary":n==-1,"btn-danger":n==1}' class="btn btn-dark" [disabled]='n!=0' (click)='change(i)'>
+      <span *ngIf='n==-1'>X</span>
+      <span *ngIf='n==1'>O</span>
+      <span *ngIf='n==0'>?</span>
+    </button>
+  </div>
+</main>
+

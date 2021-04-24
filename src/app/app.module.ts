@@ -19,6 +19,10 @@ import { ZgadnijLiczbeComponent } from './components/zgadnij-liczbe/zgadnij-licz
 import { HorneraComponent } from './components/hornera/hornera.component';
 import { WisielecComponent } from './components/wisielec/wisielec.component';
 import { ZawodyWedkarskieComponent } from './components/zawody-wedkarskie/zawody-wedkarskie.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListaZakupowComponent } from './components/lista-zakupow/lista-zakupow.component';
+import { PrzychodyComponent } from './components/przychody/przychody.component';
+import { KolkoKrzyzykComponent } from './components/kolko-krzyzyk/kolko-krzyzyk.component';
 // import { PomocnikMatematycznyDzialaniaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-dzialania/pomocnik-matematyczny-dzialania.component';
 // import { PomocnikMatematycznyTabliczkaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-tabliczka/pomocnik-matematyczny-tabliczka.component';
 
@@ -40,11 +44,15 @@ import { ZawodyWedkarskieComponent } from './components/zawody-wedkarskie/zawody
     HorneraComponent,
     WisielecComponent,
     ZawodyWedkarskieComponent,
+    ListaZakupowComponent,
+    PrzychodyComponent,
+    KolkoKrzyzykComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

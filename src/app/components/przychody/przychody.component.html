@@ -1,0 +1,50 @@
+<main class='w-80 m-3 card text-center'>
+  <div>
+    <h1>Budżet: {{calosc}}</h1>
+  </div>
+  <div class='d-flex'>
+    <div class="w-50 card m-2 bg-success">
+      <h2>Przychody</h2>
+      <div *ngFor='let przychod of budzet.przychody' class='m-1'>
+        <span *ngIf='!przychod.edit'> {{przychod.opis}} {{przychod.wartosc}} zł </span>
+        <span *ngIf='przychod.edit' class='d-flex'>
+          <input type="text" class="form-control" placeholder="Opis" [(ngModel)]='przychod.opis'>
+          <input type="number" class="form-control" placeholder="Wartość" [(ngModel)]='przychod.wartosc'>
+        </span>
+        <button class="btn btn-light w-20" (click)='przychod.edit=!przychod.edit'>
+          <span *ngIf='przychod.edit'>Zapisz</span>
+          <span *ngIf='!przychod.edit'>Edit</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="w-50 card m-2 bg-danger">
+
+      <h2>Wydatki</h2>
+      <div *ngFor='let przychod of budzet.wydatki' class='m-1'> <span *ngIf='!przychod.edit'> {{przychod.opis}} {{przychod.wartosc}} zł </span>
+        <span *ngIf='przychod.edit' class='d-flex'>
+          <input type="text" class="form-control" placeholder="Opis" [(ngModel)]='przychod.opis'>
+          <input type="number" class="form-control" max='0'  placeholder="Wartość" [(ngModel)]='przychod.wartosc'>
+        </span>
+        <button class="btn btn-light w-20" (click)='przychod.edit=!przychod.edit'>
+          <span *ngIf='przychod.edit'>Zapisz</span>
+          <span *ngIf='!przychod.edit'>Edit</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class=' w-100 text-center'>
+    <div class='d-flex ml-auto mr-auto w-50'>
+      <input type="text" class="form-control" placeholder="Opis" [(ngModel)]='opis'>
+      <input type="number" class="form-control" placeholder="Wartość" [(ngModel)]='wartosc'>
+    </div>
+    <button type='button'
+     (click)='dodaj()'
+      [ngClass]="{'w-50':true,'btn-outline-success':wartosc>0,'btn-outline-danger':wartosc<0}"
+      class="btn btn-outline-primary w-50">
+      Dodaj
+    </button>
+  </div>
+
+</main>

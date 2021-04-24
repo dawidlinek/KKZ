@@ -1,0 +1,9 @@
+main{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 30%;
+  margin:0 auto;
+}
+div{
+  margin:10px
+}

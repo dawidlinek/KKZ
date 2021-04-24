@@ -1,0 +1,19 @@
+
+<main class='w-100 text-center my-auto'>
+  <div class="card p-1 ml-auto mr-auto mt-5" style="width: 18rem;">
+
+    <div class='m-2'>
+      <p *ngIf='lista.length==0'>Brak produktów</p>
+      <div *ngFor='let produkt of lista;let id=index' class='card d-flex m-2'>
+   <div>  {{produkt.nazwa}} <span *ngIf='produkt.ilosc'> {{produkt.ilosc}} szt.</span></div>
+        <button  type="button" class="btn btn-outline-danger" (click)='usun(id)'>X</button>
+      </div>
+
+
+    </div>
+    <hr>
+    <p class='d-flex'><label class='mr-2'> Treść:</label><input  class="form-control" type="text" [(ngModel)]='nazwa'></p>
+    <p class='d-flex'><label class='mr-2'> Ilość: </label><input  class="form-control" type="number" [(ngModel)]='ilosc'></p>
+    <button type="button" class="btn btn-outline-primary" (click)='dodaj()'>Dodaj</button>
+  </div>
+</main>
