@@ -23,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListaZakupowComponent } from './components/lista-zakupow/lista-zakupow.component';
 import { PrzychodyComponent } from './components/przychody/przychody.component';
 import { KolkoKrzyzykComponent } from './components/kolko-krzyzyk/kolko-krzyzyk.component';
+import { BlogComponent } from './components/blog/blog.component';
 // import { PomocnikMatematycznyDzialaniaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-dzialania/pomocnik-matematyczny-dzialania.component';
 // import { PomocnikMatematycznyTabliczkaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-tabliczka/pomocnik-matematyczny-tabliczka.component';
 
@@ -47,6 +48,7 @@ import { KolkoKrzyzykComponent } from './components/kolko-krzyzyk/kolko-krzyzyk.
     ListaZakupowComponent,
     PrzychodyComponent,
     KolkoKrzyzykComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,41 @@
+<label for="">Wybierz Rok: </label>
+
+<select class="form-select ml-2"  [(ngModel)]='SelectedYear' aria-label="Default select example">
+  <option value="{{year}}" *ngFor='let year of avalibleYears'>{{year}}</option>
+</select>
+<label class='ml-2'>Wybierz Miesiąc: </label>
+<select class="form-select ml-2" [(ngModel)]='SelectedMonth' aria-label="Default select example" >
+  <option value="{{month}}" *ngFor='let month of avalibleMonths'>{{month}}</option>
+</select>
+<div class='d-flex scroll'>
+
+  <div class='w-50'>
+    <div  *ngFor='let post of selectedPosts; let idx=index' class='card w-50 ml-5 d-flex' (click)='displayedPost=selectedPosts[idx]'>
+        <h1>{{post.title}}</h1>
+        <p>{{post.content}}</p>
+    </div>
+  </div>
+
+  <div class='w-50'>
+    <div *ngIf='displayedPost' class='position-fixed mt-4'>
+      <h1>{{displayedPost.title}}</h1>
+      <p>{{displayedPost.content}}</p>
+      <p>{{displayedPost.date.toLocaleString()}}</p>
+    </div>
+  </div>
+</div>
+
+<div class='d-flex'>
+  <div>
+    <label>Nazwa</label>
+    <input class="form-control" [(ngModel)]='post.title' type="text"><br>
+    <label>Data</label>
+    <input  [(ngModel)]="post.date "  class="form-control" type="date">
+    <button (click)='savePost()' class="btn btn-success w-100 mt-4">Dodaj</button>
+  </div>
+  <div>
+    <textarea class="form-control"cols="30" rows="10"  [(ngModel)]='post.content' placeholder="Nazwa"></textarea>
+  </div>
+</div>
+
+
