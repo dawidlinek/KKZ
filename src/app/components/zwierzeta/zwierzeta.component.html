@@ -1,0 +1,28 @@
+<div>
+  <h1>Zarządanie zwierzętami</h1>
+</div>
+<div class='d-flex'>
+  <div class='w-25'>
+    <p (click)='dodaj=false'>Wyświetl zwierzęta</p>
+    <p (click)='dodaj=true'>Dodaj zwierzę</p>
+  </div>
+  <div *ngIf='!dodaj'>
+    <p *ngFor='let z of zwierzeta'>
+      {{z.imie}}
+      {{z.gatunek}}
+      {{data(z.data) }}
+      {{z.waga}}
+    </p>
+  </div>
+  <div *ngIf='dodaj'>
+<form [formGroup]="zwierzetaForm" (ngSubmit)="dodajZwierze()">
+<input type="text" name='imie'  formControlName="imie">
+<input type="text"  name='gatunek' formControlName="gatunek">
+<input type="date" name='data'  formControlName="data">
+<input type="number" name='waga' formControlName="waga">
+<button type="submit" [disabled]="!zwierzetaForm.valid">Dodaj</button>
+
+</form>
+
+  </div>
+</div>

@@ -1,0 +1,52 @@
+
+<div class='text-center mt-5' >
+
+<div class='w-50 card m-auto'>
+<div *ngFor='let notatka of notatki' class='d-flex '>
+  <div *ngIf='!notatka.edit' class='d-flex list-group w-75'>
+      <span class="list-group-item list-group-item-action" [ngClass]="{
+        'list-group-item-primary':notatka.priorytet=='niski',
+        'list-group-item-warning':notatka.priorytet=='sredni',
+        'list-group-item-danger':notatka.priorytet=='wysoki'
+      }">{{notatka.id}} | {{notatka.tytul}} | {{notatka.tresc}} {{notatka.priorytet}}</span>
+
+
+  </div>
+  <div *ngIf='notatka.edit' class='d-flex'>
+
+    <input type="text" disabled class="form-control" [(ngModel)]='notatka.id'>
+    <input type="text" class="form-control" [(ngModel)]='notatka.tytul'>
+    <input type="text" class="form-control" [(ngModel)]='notatka.tresc'>
+    <select [(ngModel)]='notatka.priorytet' class="form-control">
+      <option value="niski" class='bg-primary text-white'>Niski</option>
+      <option value="sredni" class='bg-warning'>Średni</option>
+      <option value="wysoki" class='bg-danger'>Wysoki</option>
+    </select>
+  </div>
+  <button class="btn btn-outline-primary w-25" (click)='notatka.edit=!notatka.edit'>
+    <span *ngIf='notatka.edit' (click)='updateNotatke(notatka)'>Zapisz</span>
+    <span *ngIf='!notatka.edit'>Edit</span>
+  </button>
+  <button class="btn btn-outline-danger " (click)='usunNotatke(notatka.id)'>
+    <span >Usuń</span>
+  </button>
+</div>
+</div>
+
+<div class='w-50 card ml-auto mr-auto   mt-5 d-flex '>
+  <h1>Nowa notatka</h1>
+<input type="text" class="form-control" placeholder="Nazwa notatki" [(ngModel)]='notatka.tytul'>
+<input type="text" class="form-control" placeholder="Tresc notatki" [(ngModel)]='notatka.tresc'>
+<select placeholder="Priorytet notatki" [(ngModel)]='notatka.priorytet' class="form-control">
+  <option value="niski" class='bg-primary' >Niski</option>
+  <option value="sredni" class='bg-warning'>Średni</option>
+  <option value="wysoki"  class='bg-danger'>Wysoki</option>
+</select>
+<button class="btn btn-outline-primary w-20" (click)='dodajNotatke()'>
+  <span>Zapisz</span>
+</button>
+
+</div>
+
+
+</div>

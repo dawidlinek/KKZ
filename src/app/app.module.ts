@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,FormGroup,ReactiveFormsModule,Validators  } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,10 @@ import { ListaZakupowComponent } from './components/lista-zakupow/lista-zakupow.
 import { PrzychodyComponent } from './components/przychody/przychody.component';
 import { KolkoKrzyzykComponent } from './components/kolko-krzyzyk/kolko-krzyzyk.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { AnimalDetailsComponent } from './components/animal-details/animal-details.component';
+import { SumaComponent } from './components/suma/suma.component';
+import { NotatkiComponent } from './components/notatki/notatki.component';
+import { ZwierzetaComponent } from './components/zwierzeta/zwierzeta.component';
 // import { PomocnikMatematycznyDzialaniaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-dzialania/pomocnik-matematyczny-dzialania.component';
 // import { PomocnikMatematycznyTabliczkaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-tabliczka/pomocnik-matematyczny-tabliczka.component';
 
@@ -49,12 +53,17 @@ import { BlogComponent } from './components/blog/blog.component';
     PrzychodyComponent,
     KolkoKrzyzykComponent,
     BlogComponent,
+    AnimalDetailsComponent,
+    SumaComponent,
+    NotatkiComponent,
+    ZwierzetaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
