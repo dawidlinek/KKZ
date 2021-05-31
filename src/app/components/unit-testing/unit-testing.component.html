@@ -1,0 +1,17 @@
+<main style='background: white;'>
+  <p class='class'>unit-testing works!</p>
+  <div id="raz">
+  <a></a>
+</div>
+<textarea id="content" cols="30" rows="10" [(ngModel)]='textarea'>podaj dane</textarea>
+<input type="checkbox" name="" (click)='show_h1=!show_h1' id="">
+<h1 id='head' *ngIf='show_h1'> h1</h1>
+<button (click)='uwagaTestuje()'>TEST</button>
+<p class="upper">{{p_upper}}</p>
+<span class="error" style='color:#ee1111'>Error</span>
+<div id="visible" *ngIf='showDiv'></div>
+<ul>
+  <li *ngFor='let i of li_array'>{{li}}</li>
+</ul>
+<h3>Margin</h3>
+</main>

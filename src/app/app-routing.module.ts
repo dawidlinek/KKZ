@@ -13,6 +13,7 @@ import { MapApiComponent } from './components/map-api/map-api.component';
 import { NotatkiComponent } from './components/notatki/notatki.component';
 import { PrzychodyComponent } from './components/przychody/przychody.component';
 import { StoperComponent } from './components/stoper/stoper.component';
+import { UnitTestingComponent } from './components/unit-testing/unit-testing.component';
 import { WisielecComponent } from './components/wisielec/wisielec.component';
 import { ZawodyWedkarskieComponent } from './components/zawody-wedkarskie/zawody-wedkarskie.component';
 import { ZgadnijLiczbeComponent } from './components/zgadnij-liczbe/zgadnij-liczbe.component';
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path:'zwierzeta2',component:AnimalDetailsComponent},
   {path:'notatki',component:NotatkiComponent},
   {path:'zwierzeta',component:ZwierzetaComponent},
+  {path:'testy',component:UnitTestingComponent},
 ];
 
 @NgModule({

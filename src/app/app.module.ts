@@ -28,6 +28,7 @@ import { AnimalDetailsComponent } from './components/animal-details/animal-detai
 import { SumaComponent } from './components/suma/suma.component';
 import { NotatkiComponent } from './components/notatki/notatki.component';
 import { ZwierzetaComponent } from './components/zwierzeta/zwierzeta.component';
+import { UnitTestingComponent } from './components/unit-testing/unit-testing.component';
 // import { PomocnikMatematycznyDzialaniaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-dzialania/pomocnik-matematyczny-dzialania.component';
 // import { PomocnikMatematycznyTabliczkaComponent } from './components/ee_09/2019_06_04/pomocnik-matematyczny-tabliczka/pomocnik-matematyczny-tabliczka.component';
 
@@ -57,6 +58,7 @@ import { ZwierzetaComponent } from './components/zwierzeta/zwierzeta.component';
     SumaComponent,
     NotatkiComponent,
     ZwierzetaComponent,
+    UnitTestingComponent,
   ],
   imports: [
     BrowserModule,
